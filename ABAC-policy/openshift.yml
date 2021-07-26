@@ -30,7 +30,7 @@ objects:
       git:
         uri: ${GIT_REPO}
         ref: 'master'
-        context-dir: '/ABAC-policy'
+        
       type: Git
     strategy:
       sourceStrategy:
