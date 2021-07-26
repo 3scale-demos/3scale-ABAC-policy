@@ -3,9 +3,12 @@
 
 This Policy allows APICast to determine if access to an API should be granted or denied  based on a defined ABAC (Attribute Based Access Control) rule in external HTTP service.
 The policy sends the below query parameters to external ABAC service:-
-    1-role : user role based on JWT claim value.
-    2-method : HTTP Verb used in the request (GET,POST,PUT,..).
-    3-resource : resource uri used in the request.
+| parameter  |  Desc | examples  | 
+|---|---|---|
+|  role |  user role based on JWT claim value | admin,user  |
+| method  | HTTP Verb used in the reques  | GET,POST,PUT,..  |
+|  resource | resource uri used in the reques  |  /order |   
+    
 It expects the response from ABAC service to have a boolean flag  with true/false value.Example json response {"isAllowed":true} ,based on the response the traffic will be blocked or allowed.
 
 The policy requires OpenID Connect authentication method in 3scale API Product. 
