@@ -1,0 +1,35 @@
+{
+  "$schema": "http://apicast.io/policy-v1/schema#manifest#",
+  "name": "JWT ABAC Authorizer",
+  "summary": "Allow or deny traffic based on ABAC rule defined in external HTTP ABAC service",
+  "description":
+  ["This Policy allow to block traffic based on a defined ABAC rule in external HTTP ABAC service.",
+    "It sends 3 parameters to ABAC service :",
+    "  1-role : user role based on JWT claim value" ,
+    "  2-method : HTTP Verb used in the request (GET,POST,PUT,..). " ,
+    "  3-resource : resource uri used in the request. " ,
+    " it expects the response from ABAC service to have a boolean flag  having true/false value."
+  ],
+  "version": "1.0.0",
+  "configuration": {
+    "type": "object",
+    "properties": {
+      "author_rest_endpoint": {
+        "title": "ABAC Authorization Service HTTP Endpoint ",
+        "description": "ABAC Authorization Service HTTP Endpoint",
+        "type": "string"
+      },
+     
+      "JWT_claim_name": {
+        "title": "JWT Claim name of the user role ",
+        "description": "JWT Claim name of the user role",
+        "type": "string"
+      },
+         "error_message": {
+        "title": "Error message",
+        "description": "Error message to show to user when traffic is blocked",
+        "type": "string"
+      } 
+    }
+  }
+}
