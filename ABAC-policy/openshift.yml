@@ -5,9 +5,6 @@ metadata:
 message: "3scale APAC Authorization policy"
 objects:
 
-
-
-
 - apiVersion: v1
   kind: ImageStream
   metadata:
@@ -15,9 +12,6 @@ objects:
     labels:
       app: apicast
     name: apicast-new-policies
-
-
-
 
 - apiVersion: v1
   kind: BuildConfig
@@ -32,6 +26,7 @@ objects:
         kind: ImageStreamTag
         name: 'apicast-new-policies:${NEW_POLICY_RELEASE}'
     source:
+      contextDir: ABAC-policy
       git:
         uri: ${GIT_REPO}
         ref: 'master'
@@ -43,9 +38,6 @@ objects:
           kind: ImageStreamTag
           name: 'amp-apicast-custom:${CUSTOM_IS_TAG}'
           namespace: ${APICAST_CUSTOM_NAMESPACE}
-
-
-
 
 - apiVersion: v1
   kind: BuildConfig
@@ -96,7 +88,6 @@ objects:
 #    triggers:
 #      - type: ConfigChange
 #      - type: ImageChange
-
 
 
 
