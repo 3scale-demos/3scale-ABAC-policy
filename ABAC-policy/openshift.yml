@@ -1,8 +1,9 @@
 apiVersion: v1
 kind: Template
+apiVersion: template.openshift.io/v1
 metadata:
   name: "apicast-custom-policies"
-message: "3scale GUID Policy"
+message: "3scale APAC Authorization policy"
 objects:
 
 
@@ -119,4 +120,4 @@ parameters:
 
 - name: APICAST_CUSTOM_NAMESPACE
   description: 'where to find the custom policies'
-  value: 3scale
+  value: 3scale210
