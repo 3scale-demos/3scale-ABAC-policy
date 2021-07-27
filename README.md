@@ -9,7 +9,7 @@ The policy sends the below query parameters to external ABAC service:-
 | method  | HTTP Verb used in the reques  | GET,POST,PUT,..  |
 |  resource | resource uri used in the reques  |  /order |   
 
-example invocation : curl  "https://<<ABAC service endpoint>>/role=user&action=GET&resource=/order".
+example invocation : curl  "https://<ABAC service endpoint>/role=user&action=GET&resource=/order".
 It expects the response from ABAC service to have a boolean flag  with true/false value.Example json response {"isAllowed":true} ,based on the response the traffic will be blocked or allowed.
 
 The policy requires OpenID Connect authentication method in 3scale API Product. 
