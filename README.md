@@ -89,7 +89,7 @@ Once the redeploys finish the new policy appearing in the list of policies to ad
    - Error message to show to the client when traffic is blocked.
 8. Once you finish changing the settings, you can click on **Update policy** button and then `Update Policy Chain`.
 9. Go to configuration and promote your changes to staging.
-
+![alt text](https://github.com/abdelhamidfg/3scale-ABAC-policy/blob/master/policy-config.jpg?raw=true)
 
 ## Implementing ABAC Service
 The implementation example of ABAC service using RedHat serverless function quarkus runtime and Postgresql database.
@@ -111,3 +111,4 @@ below steps for installing ABAC service after cloning the repositry.
     
     $ cd ABAC-Authorization-service
     $ kn func deploy -r registry_string -n abac-service -v
+![alt text](https://github.com/abdelhamidfg/3scale-ABAC-policy/blob/master/ABAC-service.jpg?raw=true)
