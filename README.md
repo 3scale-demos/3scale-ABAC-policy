@@ -111,6 +111,7 @@ below steps for installing ABAC service after cloning the repositry.
        psql -d apidb -U admin 
    ```
   ![alt text](https://github.com/abdelhamidfg/3scale-ABAC-policy/blob/master/db-table.jpg?raw=true)
+  
 4. Install OpenShift pre-requisit Servlerless operators following the [documentation](https://docs.openshift.com/container-platform/4.7/serverless/admin_guide/install-serverless-operator.html#next-steps_installing-openshift-serverless)
 5.  Deploy a Quarkus Function to OpenShift Serverless
       ```shell
