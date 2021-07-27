@@ -110,7 +110,7 @@ below steps for installing ABAC service after cloning the repositry.
   ```shell
        psql -d apidb -U admin 
    ```
-    - run import.sql
+   - run import.sql
    
   ![alt text](https://github.com/abdelhamidfg/3scale-ABAC-policy/blob/master/db-table.jpg?raw=true)
   
