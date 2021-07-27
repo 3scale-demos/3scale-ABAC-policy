@@ -19,7 +19,7 @@ The policy requires OpenID Connect authentication method in 3scale API Product.
 
 The repository has 2 folders :-
 - ABAC-policy folder contains 3scale custom policy source code and configurations.
-- ABAC-Authorization-service folder contains an implementation example of ABAC service/microservice using RedHat serverless function quarkus runtime and Postgresql database.
+- ABAC-Authorization-service folder contains an implementation example of ABAC service/microservice using Red Hat serverless function quarkus runtime and Postgresql database.
 
 
 
@@ -96,7 +96,7 @@ Once the redeploys finish the new policy appearing in the list of policies to ad
 ![alt text](https://github.com/abdelhamidfg/3scale-ABAC-policy/blob/master/policy-config.jpg?raw=true)
 
 ## Implementing ABAC Service
-The implementation example of ABAC service using RedHat serverless function quarkus runtime and Postgresql database.
+The implementation example of ABAC service using Red Hat serverless function quarkus runtime and Postgresql database.
 below steps for installing ABAC service after cloning the repositry.
 1. create a new openshift project
     $oc new-project abac-service
